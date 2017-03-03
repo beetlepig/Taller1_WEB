@@ -218,7 +218,7 @@ a {
     position: relative;
     margin-top: 13px;
     width: 67%;
-    margin-left: 16%;
+    margin-left: 16.5%;
     padding: 0px;
     height: 60%;
     border-radius: 7px;
@@ -281,7 +281,7 @@ position: absolute;
 
 .contenedor-productos{
     margin-top:100px;
-    margin-left: 16%;
+    margin-left: 16.5%;
     width: 67%;
     height:3000px;
     background-color: rgba(236,239,241 ,1);
@@ -337,8 +337,8 @@ position: absolute;
 
 .contenedor-filtros{
     position: fixed;
-    top: 460px;
-    left: 0.5%;
+    top: 100px;
+    right: 0.5%;
 
     width: 15%;
 
@@ -358,7 +358,7 @@ position: absolute;
 }
 
 .lista_colores li{
-    transition-duration: 0.5s;
+
     margin-top: 10px;
 
     margin-left: -20px;
@@ -376,6 +376,57 @@ padding: 0;
     padding: 0px;
 
 }
+
+
+
+.botonRed{
+background-color: rgba(229,57,53 ,0.5);
+    border: none;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+}
+
+.botonRed:hover{
+    background-color: rgba(229,57,53 ,1);
+    cursor: pointer;
+}
+
+.botonYellow{
+    background-color: rgba(253,216,53 ,0.5);
+    border: none;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+}
+
+.botonYellow:hover{
+    background-color: rgba(253,216,53 ,1);
+    cursor: pointer;
+}
+
+.botonBlue{
+    background-color: rgba(3,155,229 ,0.5);
+    border: none;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+}
+
+.botonBlue:hover{
+    background-color: rgba(3,155,229 ,1);
+    cursor: pointer;
+}
+
+.botonBrow{
+    background-color: rgba(109,76,65 ,0.5);
+    border: none;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+}
+
+.botonBrow:hover{
+    background-color: rgba(109,76,65 ,1);
+    cursor: pointer;
+}
+
 
 /* para 1170px o menos */
 @media screen and (max-width:1170px) {
