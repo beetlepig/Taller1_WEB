@@ -313,6 +313,7 @@ position: absolute;
     padding-left: 10px;
     width: 70%;
     font-weight: 300;
+    font-size: 0.8vw;
 }
 
 .contenido-ordenar ul li:hover{
@@ -323,9 +324,6 @@ position: absolute;
     font-weight: 400;
     color: white;
     padding: 10px 0px 10px 10px;
-
-
-
 }
 
 
@@ -448,14 +446,36 @@ background-color: rgba(229,57,53 ,0.5);
 .lista_codigoColores li{
 
     margin-top: 10px;
-
     margin-left: -18px;
     list-style-type: none;
     width: 95%;
     padding: 0;
     height: 20px;
-    background-color: #689F38;
 
+
+}
+
+.codigo_rojo {
+   background-color: rgba(229,57,53 ,1);
+}
+
+.codigo_azul {
+    background-color: rgba(3,155,229 ,1);
+}
+
+.codigo_amarillo {
+    background-color: rgba(253,216,53 ,1);
+}
+
+.codigo_marron {
+    background-color: rgba(109,76,65 ,1);
+}
+
+.lista_codigoColores li p{
+    color: white;
+    margin-left: 5px;
+    font-weight: 300;
+    font-size: 0.8vw;
 }
 
 
