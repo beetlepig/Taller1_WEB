@@ -1,3 +1,8 @@
-/**
- * Created by sky_k on 05/03/2017.
- */
+
+var productos= [
+    {"nombre":"Rosa", "srcIMG":"../public/images/imgProductos/1.jpg", "categoria":"Flor"},
+    {"nombre":"Saman", "srcIMG":"../public/images/imgProductos/1.jpg", "categoria":"Arbol"},
+
+
+];
+

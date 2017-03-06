@@ -9,11 +9,7 @@
 
 
 
-/*=============================================
-DOCUMENTO DE CSS DE PRACTICA CON HTML Y CSS
-	22 DE FEBRERO
-==============================================*/
-/* -------------estilos generales ------------------*/
+
 
 body {
   padding: 50px;
@@ -300,6 +296,37 @@ position: absolute;
     width:  250px;
     background-color: bisque;
     margin: 20px;
+    padding: 3px;
+
+}
+
+.imagen_producto {
+    margin: 0;
+    padding: 0;
+    background: url("../images/imgProductos/1.jpg") center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85%;
+}
+
+.contenedor_nombre_producto {
+
+    background-color: #00B7FF;
+    margin: 0;
+    padding: 0;
+    height: 15%;
+}
+
+.contenedor_nombre_producto p {
+    margin: 0;
+
+    padding: 0;
+   padding-top: 5px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
 }
 
 
@@ -491,6 +518,9 @@ background-color: rgba(229,57,53 ,0.5);
     font-weight: 300;
     font-size: 0.8vw;
 }
+
+
+
 
 
 /* para 1170px o menos */
