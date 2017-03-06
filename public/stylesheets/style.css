@@ -523,11 +523,23 @@ background-color: rgba(229,57,53 ,0.5);
 
 
 
-/* para 1170px o menos */
-@media screen and (max-width:1170px) {
-    #loginBox {
 
-        background-color: red;
+/* para el comportamiento de algunas fuentes - 1440px o menos*/
+@media screen and (max-width:1440px) {
+    .contenido-ordenar ul li{
+
+        font-size: 1vw;
+    }
+}
+
+
+
+/* para 1024px o menos -tamaño laptop pequeño, tablet*/
+@media screen and (max-width:1170px) {
+    .contenido-ordenar ul li{
+
+        font-size: 1.2vw;
+        color: rosybrown;
     }
 }
 
@@ -535,8 +547,8 @@ background-color: rgba(229,57,53 ,0.5);
 
 
 
-/* para 480px o menos */
-@media screen and (max-width:480px) {
+/* para 425px o menos, tañano movil */
+@media screen and (max-width:425px) {
     #loginBox {
         width: 90%;
         left: 11%;
