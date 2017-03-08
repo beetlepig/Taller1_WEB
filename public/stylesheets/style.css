@@ -303,7 +303,7 @@ position: absolute;
 .imagen_producto {
     margin: 0;
     padding: 0;
-    background: url("../images/imgProductos/1.jpg") center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 85%;
@@ -529,6 +529,7 @@ background-color: rgba(229,57,53 ,0.5);
     .contenido-ordenar ul li{
 
         font-size: 1vw;
+
     }
 }
 
