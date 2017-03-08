@@ -294,9 +294,9 @@ position: absolute;
 
     height: 250px;
     width:  250px;
-    background-color: bisque;
+
     margin: 20px;
-    padding: 3px;
+    padding: 2px;
 
 }
 
@@ -311,7 +311,7 @@ position: absolute;
 
 .contenedor_nombre_producto {
 
-    background-color: #00B7FF;
+
     margin: 0;
     padding: 0;
     height: 15%;
@@ -319,9 +319,8 @@ position: absolute;
 
 .contenedor_nombre_producto p {
     margin: 0;
-
     padding: 0;
-   padding-top: 5px;
+    padding-top: 5px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -380,7 +379,6 @@ position: absolute;
     right: 0.5%;
 
     width: 15%;
-
     background-color: rgba(236,239,241 ,1);
     position: fixed;
     box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
@@ -394,6 +392,18 @@ position: absolute;
     padding: 0px;
 
 
+}
+
+.filtro_clima h5{
+    padding-left: 30px;
+}
+
+.contenido-filtros h4{
+    padding-left: 5px;
+}
+
+.contenido-filtros h5{
+    padding-left: 15px;
 }
 
 .lista_colores li{
