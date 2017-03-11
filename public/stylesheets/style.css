@@ -440,6 +440,11 @@ background-color: rgba(229,57,53 ,0.5);
     cursor: pointer;
 }
 
+.botonRed:active{
+    background-color: rgba(229,57,255 ,1);
+    cursor: pointer;
+}
+
 .botonYellow{
     background-color: rgba(253,216,53 ,0.5);
     border: none;
