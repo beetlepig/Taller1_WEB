@@ -429,21 +429,18 @@ padding: 0;
 
 
 .botonRed{
-background-color: rgba(229,57,53 ,0.5);
+    background-color: rgba(229,57,53 ,0.5);
     border: none;
     border-radius: 8px;
     transition-duration: 0.5s;
 }
 
 .botonRed:hover{
-    background-color: rgba(229,57,53 ,1);
+  background-color: rgba(229,57,53 ,1) !important;
     cursor: pointer;
 }
 
-.botonRed:active{
-    background-color: rgba(229,57,255 ,1);
-    cursor: pointer;
-}
+
 
 .botonYellow{
     background-color: rgba(253,216,53 ,0.5);
@@ -456,6 +453,8 @@ background-color: rgba(229,57,53 ,0.5);
     background-color: rgba(253,216,53 ,1);
     cursor: pointer;
 }
+
+
 
 .botonBlue{
     background-color: rgba(3,155,229 ,0.5);
