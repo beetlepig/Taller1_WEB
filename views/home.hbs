@@ -47,11 +47,11 @@
             <form action="/home" method="get">
                 <ul>
 
-                    <li><button type="submit" name="climaBoton" value="Frio_check" >Frio</button></li>
-                    <li><button type="submit" name="climaBoton"  value="Caliente_check" >Caliente</button></li>
-                    <li><button type="submit" name="climaBoton"  value="Templado_check" >Templado</button></li>
-                    <li><button type="submit" name="climaBoton"  value="luvioso_check" >Lluvioso</button></li>
-                    <li><button type="submit" name="climaBoton"  value="Seco_check">Seco</button></li>
+                    <li><button type="submit" name="boton" value="Frio_check" >Frio</button></li>
+                    <li><button type="submit" name="boton"  value="Caliente_check" >Caliente</button></li>
+                    <li><button type="submit" name="boton"  value="Templado_check" >Templado</button></li>
+                    <li><button type="submit" name="boton"  value="Lluvioso_check" >Lluvioso</button></li>
+                    <li><button type="submit" name="boton"  value="Seco_check">Seco</button></li>
 
                 </ul>
             </form>
@@ -61,6 +61,7 @@
 
     </div>
 <div class="contenedor-productos">
+    <h3 style="display:  {{mostrar}}">No hay elementos</h3>
     {{#each productos}}
     <div class="producto" style="background-color: rgba({{color}});"><div class="imagen_producto" style="background-image: url('{{srcIMG}}');"></div><div class="contenedor_nombre_producto"><p>{{nombre}}</p></div></div>
     {{/each}}

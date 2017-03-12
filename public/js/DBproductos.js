@@ -1,9 +1,16 @@
 
 var productosFiltrados = [];
+var arrayFinal= [];
+var arrayFinalFinal= [];
 var arbolCheck=false;
 var arbustoCheck=false;
 var florCheck=false;
-var helechoCheck;
+var helechoCheck=false;
+var frioCheck=false;
+var calienteCheck=false;
+var templadoCheck=false;
+var lluviosoCheck=false;
+var secoCheck=false;
 
 var productos= [
     {"nombre":"Rosa", "srcIMG":"/images/imgProductos/2.jpg", "categoria":"Flor", "color":"249,168,37 ,1", "clima":"Frio"},
@@ -18,6 +25,34 @@ var productos= [
     {"nombre":"Aloe Vera", "srcIMG":"/images/imgProductos/10.jpg", "categoria":"Flor", "color":"249,168,37 ,1", "clima":"Seco"}
 ];
 
+exports.getFrioCkeck=function () {
+  return frioCheck;
+};
+
+exports.getCalienteCkeck=function () {
+    return calienteCheck;
+};
+
+exports.getTempladoCkeck=function () {
+    return templadoCheck;
+};
+
+exports.getLluviosoCheck=function () {
+    return lluviosoCheck;
+};
+
+exports.getSecoCheck=function () {
+    return secoCheck;
+};
+
+exports.comprobarFiltroActivo= function () {
+  if(arbolCheck | arbustoCheck | florCheck | helechoCheck | frioCheck | calienteCheck | templadoCheck |lluviosoCheck | secoCheck){
+      return true;
+  }  else {
+      return false;
+  }
+};
+
 
 exports.getall= function () {
     return productos;
@@ -29,6 +64,10 @@ exports.clearFiltroArray= function () {
 
 exports.getFiltro= function () {
   return productosFiltrados;
+};
+
+exports.getArrayFinal= function () {
+  return arrayFinal;
 };
 
 exports.pushCategoriaFlor= function () {
@@ -133,3 +172,147 @@ exports.pushCategoriaHelecho= function () {
     }
 
 };
+
+exports.filtroFrio= function () {
+    for (i = 0; i < productos.length; i++) {
+        if (productos[i].clima == "Frio") {
+            if (frioCheck==false) {
+                arrayFinalFinal.push(productos[i]);
+
+            } else {
+                var index =arrayFinalFinal.indexOf(productos[i]);
+                if (index >= 0) {
+                    arrayFinalFinal.splice(index, 1);
+                }
+
+            }
+        }
+    }
+
+    if(!frioCheck){
+        frioCheck=true;
+    } else {
+        frioCheck=false;
+    }
+};
+
+exports.filtroTemplado= function () {
+    for (i = 0; i < productos.length; i++) {
+        if (productos[i].clima == "Templado") {
+            if (templadoCheck==false) {
+                arrayFinalFinal.push(productos[i]);
+
+            } else {
+                var index =arrayFinalFinal.indexOf(productos[i]);
+                if (index >= 0) {
+                    arrayFinalFinal.splice(index, 1);
+                }
+
+            }
+        }
+    }
+
+    if(!templadoCheck){
+        templadoCheck=true;
+    } else {
+        templadoCheck=false;
+    }
+};
+
+exports.filtroCaliente= function () {
+    for (i = 0; i < productos.length; i++) {
+        if (productos[i].clima == "Caliente") {
+            if (calienteCheck==false) {
+                arrayFinalFinal.push(productos[i]);
+
+            } else {
+                var index =arrayFinalFinal.indexOf(productos[i]);
+                if (index >= 0) {
+                    arrayFinalFinal.splice(index, 1);
+                }
+
+            }
+        }
+    }
+
+    if(!calienteCheck){
+        calienteCheck=true;
+    } else {
+        calienteCheck=false;
+    }
+};
+
+exports.filtroLluvioso= function () {
+    for (i = 0; i < productos.length; i++) {
+        if (productos[i].clima == "Lluvioso") {
+            if (lluviosoCheck==false) {
+                arrayFinalFinal.push(productos[i]);
+
+            } else {
+                var index =arrayFinalFinal.indexOf(productos[i]);
+                if (index >= 0) {
+                    arrayFinalFinal.splice(index, 1);
+                }
+
+            }
+        }
+    }
+
+    if(!lluviosoCheck){
+        lluviosoCheck=true;
+    } else {
+        lluviosoCheck=false;
+    }
+};
+
+exports.filtroSeco= function () {
+    for (i = 0; i < productos.length; i++) {
+        if (productos[i].clima == "Seco") {
+            if (secoCheck==false) {
+                arrayFinalFinal.push(productos[i]);
+
+            } else {
+                var index =arrayFinalFinal.indexOf(productos[i]);
+                if (index >= 0) {
+                    arrayFinalFinal.splice(index, 1);
+                }
+
+            }
+        }
+    }
+
+    if(!secoCheck){
+        secoCheck=true;
+    } else {
+        secoCheck=false;
+    }
+};
+
+Array.prototype.unique = function() {
+    var a = this.concat();
+    for(var i=0; i<a.length; ++i) {
+        for(var j=i+1; j<a.length; ++j) {
+            if(a[i] === a[j])
+                a.splice(j--, 1);
+        }
+    }
+
+    return a;
+};
+
+exports.unirArrays= function () {
+    arrayFinal= productosFiltrados.concat(arrayFinalFinal).unique();
+};
+
+exports.interceptarArrays= function () {
+    arrayFinal= intersect(arrayFinalFinal,productosFiltrados);
+};
+
+function intersect(a, b) {
+    var t;
+    if (b.length > a.length) t = b, b = a, a = t; // indexOf to loop over shorter
+    return a.filter(function (e) {
+        return b.indexOf(e) > -1;
+    });
+}
+
