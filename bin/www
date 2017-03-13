@@ -11,15 +11,17 @@ var productosDB= require('../public/js/DBproductos');
 var cuenta=0;
 var contarTiempo =setInterval(time,1000);
 var desconectado=false;
+var desconectadoDefinitivo=false;
 
 function time() {
-  if (desconectado) {
+  if (desconectado && !desconectadoDefinitivo) {
       cuenta += 1;
       console.log(cuenta);
-      if (cuenta == 10) {
+      if (cuenta == 5) {
           console.log("desconectado defiitivamente");
-          clearInterval(contarTiempo);
+
           productosDB.clear();
+          desconectadoDefinitivo=true;
       }
   }
 
@@ -55,6 +57,7 @@ io.on('connection', function(socket) {
     console.log('Un cliente se ha conectado');
     desconectado=false;
     cuenta=0;
+    desconectadoDefinitivo=false;
     socket.on('disconnect', function(){
      console.log("desconectado");
      desconectado=true;
