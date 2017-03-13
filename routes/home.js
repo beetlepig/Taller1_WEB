@@ -98,25 +98,23 @@ router.get('/', function(req, res, next) {
 
     if (!productosDB.comprobarFiltroActivo()) {
        console.log("sin filtros");
-       res.render('home', {title: 'Jardin Misterioso', productos: productosDB.getall(), mostrar: "none"});
+       res.render('home', {title: 'Jardin Misterioso', productos: productosDB.getall(), mostrar: "none", numeroProductos: productosDB.getProductosTamano()});
 
 
 
    }  else if(productosDB.getArrayFinal().length == 0 && productosDB.comprobarFiltroActivo()){
         console.log("no hay elementos")
-        res.render('home', {title: 'Jardin Misterioso', productos: productosDB.getArrayFinal(), mostrar: "flex"});
+        res.render('home', {title: 'Jardin Misterioso', productos: productosDB.getArrayFinal(), mostrar: "flex", numeroProductos: productosDB.getProductosTamano()});
 
     } else {
         console.log("Con filtros");
-        res.render('home', {title: 'Jardin Misterioso', productos: productosDB.getArrayFinal(), mostrar: "none"});
+        res.render('home', {title: 'Jardin Misterioso', productos: productosDB.getArrayFinal(), mostrar: "none", numeroProductos: productosDB.getProductosTamano()});
     }
 
 
 
 
-    req.on("close", function() {
-       console.log("desconectado");
-    });
+
 
 
 

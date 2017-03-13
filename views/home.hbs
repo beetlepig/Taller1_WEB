@@ -1,4 +1,5 @@
 <body>
+
 <header class="headerBarra">
     <div class="barra">
         <input type="checkbox" id="menu-bar">
@@ -63,7 +64,18 @@
 <div class="contenedor-productos">
     <h3 style="display:  {{mostrar}}">No hay elementos</h3>
     {{#each productos}}
-    <div class="producto" style="background-color: rgba({{color}});"><div class="imagen_producto" style="background-image: url('{{srcIMG}}');"></div><div class="contenedor_nombre_producto"><p>{{nombre}}</p></div></div>
+
+    <div class="producto" style="background-color: rgba({{color}});">
+        <div class="opacidadProdcuto" id="sel{{@index}}" onclick="selProducto('sel{{@index}}')">
+
+        </div>
+
+        <div class="imagen_producto" style="background-image: url('{{srcIMG}}');"></div>
+
+
+        <div class="contenedor_nombre_producto"><p>{{nombre}}</p></div>
+
+    </div>
     {{/each}}
 
 </div>

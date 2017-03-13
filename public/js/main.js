@@ -1,9 +1,15 @@
 var btnArray=[];
 var countArray=[];
+var countProducto=[];
 
 window.onload = function(){
+
+    for(i=0;i<count;i++){
+        countProducto.push(0);
+    }
     for (i=0;i<9;i++){
         btnArray.push(document.getElementById("button"+i));
+
     }
     for (i=0;i<9;i++){
         countArray.push(0);
@@ -48,6 +54,22 @@ function setColor(btn, colorOne, colorTwo){
 }
 
 
+function selProducto(producto) {
+console.log("entro");
+
+
+    var property = document.getElementById(producto);
+    if (countProducto[producto] == 0) {
+        property.style.backgroundColor= 'rgba(0,0,0,0.0)';
+        countProducto[producto] = 1;
+    }
+    else {
+        property.style.backgroundColor= 'rgba(0,0,0,0.3)';
+        countProducto[producto] = 0;
+    }
+}
+
+
 
 
 function httpGet(theUrl)
@@ -57,3 +79,6 @@ function httpGet(theUrl)
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
+
+
+

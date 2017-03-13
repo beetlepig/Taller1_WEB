@@ -25,6 +25,10 @@ var productos= [
     {"nombre":"Aloe Vera", "srcIMG":"/images/imgProductos/10.jpg", "categoria":"Flor", "color":"249,168,37 ,1", "clima":"Seco"}
 ];
 
+exports.getProductosTamano=function () {
+  return productos.length;
+};
+
 exports.getFrioCkeck=function () {
   return frioCheck;
 };
