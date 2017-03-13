@@ -49,6 +49,18 @@ exports.getArbolCheck=function () {
     return arbolCheck;
 };
 
+exports.getFlorCheck=function () {
+    return florCheck;
+};
+
+exports.getArbustoCheck=function () {
+    return arbustoCheck;
+};
+
+exports.getHelechoCheck=function () {
+    return helechoCheck;
+};
+
 exports.comprobarFiltroActivo= function () {
   if(arbolCheck | arbustoCheck | florCheck | helechoCheck | frioCheck | calienteCheck | templadoCheck |lluviosoCheck | secoCheck){
       return true;

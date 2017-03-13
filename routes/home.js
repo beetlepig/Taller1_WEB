@@ -9,7 +9,6 @@ router.get('/', function(req, res, next) {
        console.log("miau miau red");
        productosDB.pushCategoriaArbol();
        console.log(productosDB.getFiltro().length);
-       productosDB.unirArrays();
        if(productosDB.getSegundoArray().length==0 || !productosDB.getArbolCheck()){
            productosDB.unirArrays();
        }else if(productosDB.getArbolCheck()) {
@@ -20,21 +19,33 @@ router.get('/', function(req, res, next) {
         console.log("miau miau blue");
         productosDB.pushCategoriaArbusto();
         console.log(productosDB.getFiltro().length);
-        productosDB.unirArrays();
+        if(productosDB.getSegundoArray().length==0 || !productosDB.getArbustoCheck()){
+            productosDB.unirArrays();
+        }else if(productosDB.getArbustoCheck()) {
+            productosDB.interceptarArrays();
+        }
     }
 
     if (id == "botonYellow"){
         console.log("miau miau amarillo");
         productosDB.pushCategoriaFlor();
         console.log(productosDB.getFiltro().length);
-        productosDB.unirArrays();
+        if(productosDB.getSegundoArray().length==0 || !productosDB.getFlorCheck()){
+            productosDB.unirArrays();
+        }else if(productosDB.getFlorCheck()) {
+            productosDB.interceptarArrays();
+        }
     }
 
     if (id == "botonBrow"){
         console.log("miau miau cafe");
         productosDB.pushCategoriaHelecho();
         console.log(productosDB.getFiltro().length);
-        productosDB.unirArrays();
+        if(productosDB.getSegundoArray().length==0 || !productosDB.getHelechoCheck()){
+            productosDB.unirArrays();
+        }else if(productosDB.getHelechoCheck()) {
+            productosDB.interceptarArrays();
+        }
     }
 
     if (id == "Frio_check"){
