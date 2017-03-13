@@ -61,8 +61,24 @@ exports.getHelechoCheck=function () {
     return helechoCheck;
 };
 
+exports.getCategoriatrue=function () {
+    if(arbolCheck | arbustoCheck | florCheck | helechoCheck){
+        return true;
+    }  else {
+        return false;
+    }
+};
+
 exports.comprobarFiltroActivo= function () {
-  if(arbolCheck | arbustoCheck | florCheck | helechoCheck | frioCheck | calienteCheck | templadoCheck |lluviosoCheck | secoCheck){
+    if(arbolCheck | arbustoCheck | florCheck | helechoCheck | frioCheck | calienteCheck | templadoCheck |lluviosoCheck | secoCheck){
+        return true;
+    }  else {
+        return false;
+    }
+};
+
+exports.getClimatrue= function () {
+  if(frioCheck | calienteCheck | templadoCheck |lluviosoCheck | secoCheck){
       return true;
   }  else {
       return false;

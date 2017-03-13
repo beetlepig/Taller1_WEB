@@ -9,9 +9,9 @@ router.get('/', function(req, res, next) {
        console.log("miau miau red");
        productosDB.pushCategoriaArbol();
        console.log(productosDB.getFiltro().length);
-       if(productosDB.getSegundoArray().length==0 || !productosDB.getArbolCheck()){
+       if(productosDB.getSegundoArray().length==0 || (!productosDB.getArbolCheck()  && !productosDB.getCategoriatrue())){
            productosDB.unirArrays();
-       }else if(productosDB.getArbolCheck()) {
+       }else if(productosDB.getArbolCheck() || productosDB.getCategoriatrue()) {
            productosDB.interceptarArrays();
        }
    }
@@ -19,9 +19,9 @@ router.get('/', function(req, res, next) {
         console.log("miau miau blue");
         productosDB.pushCategoriaArbusto();
         console.log(productosDB.getFiltro().length);
-        if(productosDB.getSegundoArray().length==0 || !productosDB.getArbustoCheck()){
+        if(productosDB.getSegundoArray().length==0 || (!productosDB.getArbustoCheck()) && !productosDB.getCategoriatrue()){
             productosDB.unirArrays();
-        }else if(productosDB.getArbustoCheck()) {
+        }else if(productosDB.getArbustoCheck() || productosDB.getCategoriatrue()) {
             productosDB.interceptarArrays();
         }
     }
@@ -30,9 +30,9 @@ router.get('/', function(req, res, next) {
         console.log("miau miau amarillo");
         productosDB.pushCategoriaFlor();
         console.log(productosDB.getFiltro().length);
-        if(productosDB.getSegundoArray().length==0 || !productosDB.getFlorCheck()){
+        if(productosDB.getSegundoArray().length==0 || (!productosDB.getFlorCheck()  && !productosDB.getCategoriatrue())){
             productosDB.unirArrays();
-        }else if(productosDB.getFlorCheck()) {
+        }else if(productosDB.getFlorCheck() || productosDB.getCategoriatrue()) {
             productosDB.interceptarArrays();
         }
     }
@@ -41,9 +41,9 @@ router.get('/', function(req, res, next) {
         console.log("miau miau cafe");
         productosDB.pushCategoriaHelecho();
         console.log(productosDB.getFiltro().length);
-        if(productosDB.getSegundoArray().length==0 || !productosDB.getHelechoCheck()){
+        if(productosDB.getSegundoArray().length==0 || (!productosDB.getHelechoCheck()  && !productosDB.getCategoriatrue())){
             productosDB.unirArrays();
-        }else if(productosDB.getHelechoCheck()) {
+        }else if(productosDB.getHelechoCheck() || productosDB.getCategoriatrue()) {
             productosDB.interceptarArrays();
         }
     }
@@ -51,18 +51,18 @@ router.get('/', function(req, res, next) {
     if (id == "Frio_check"){
         console.log("grr frio");
         productosDB.filtroFrio();
-        if(productosDB.getFiltro().length==0 || !productosDB.getFrioCkeck()){
+        if(productosDB.getFiltro().length==0 || (!productosDB.getFrioCkeck() && !productosDB.getClimatrue())){
             productosDB.unirArrays();
-        }else if(productosDB.getFrioCkeck()) {
+        }else if(productosDB.getFrioCkeck() || productosDB.getClimatrue()) {
             productosDB.interceptarArrays();
         }
     }
     if (id == "Caliente_check"){
         console.log("grr caliente");
         productosDB.filtroCaliente();
-        if(productosDB.getFiltro().length==0 || !productosDB.getCalienteCkeck()){
+        if(productosDB.getFiltro().length==0 || (!productosDB.getCalienteCkeck() && !productosDB.getClimatrue())){
             productosDB.unirArrays();
-        }else if(productosDB.getCalienteCkeck()) {
+        }else if(productosDB.getCalienteCkeck() || productosDB.getClimatrue()) {
             productosDB.interceptarArrays();
         }
     }
@@ -70,18 +70,18 @@ router.get('/', function(req, res, next) {
     if (id == "Templado_check"){
         console.log("grr templado");
         productosDB.filtroTemplado();
-        if(productosDB.getFiltro().length==0 || !productosDB.getTempladoCkeck()){
+        if(productosDB.getFiltro().length==0 || (!productosDB.getTempladoCkeck() && !productosDB.getClimatrue())){
             productosDB.unirArrays();
-        }else if(productosDB.getTempladoCkeck()) {
+        }else if(productosDB.getTempladoCkeck() || productosDB.getClimatrue()) {
             productosDB.interceptarArrays();
         }
     }
     if (id == "Lluvioso_check"){
         console.log("grr lluvioso");
         productosDB.filtroLluvioso();
-        if(productosDB.getFiltro().length==0 || !productosDB.getLluviosoCheck()){
+        if(productosDB.getFiltro().length==0 || (!productosDB.getLluviosoCheck() && !productosDB.getClimatrue())){
             productosDB.unirArrays();
-        }else if(productosDB.getLluviosoCheck()) {
+        }else if(productosDB.getLluviosoCheck() || productosDB.getClimatrue()) {
             productosDB.interceptarArrays();
         }
     }
@@ -89,9 +89,9 @@ router.get('/', function(req, res, next) {
     if (id == "Seco_check"){
         console.log("grr seco");
         productosDB.filtroSeco();
-        if(productosDB.getFiltro().length==0 || !productosDB.getSecoCheck()){
+        if(productosDB.getFiltro().length==0 || (!productosDB.getSecoCheck() && !productosDB.getClimatrue())){
             productosDB.unirArrays();
-        }else if(productosDB.getSecoCheck()) {
+        }else if(productosDB.getSecoCheck() || productosDB.getClimatrue()) {
             productosDB.interceptarArrays();
         }
     }
