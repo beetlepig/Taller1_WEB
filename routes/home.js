@@ -10,6 +10,11 @@ router.get('/', function(req, res, next) {
        productosDB.pushCategoriaArbol();
        console.log(productosDB.getFiltro().length);
        productosDB.unirArrays();
+       if(productosDB.getSegundoArray().length==0 || !productosDB.getArbolCheck()){
+           productosDB.unirArrays();
+       }else if(productosDB.getArbolCheck()) {
+           productosDB.interceptarArrays();
+       }
    }
     if (id == "botonBlue"){
         console.log("miau miau blue");
@@ -96,6 +101,17 @@ router.get('/', function(req, res, next) {
     }
 
 
+
+
+    req.on("close", function() {
+       console.log("desconectado");
+    });
+
+
+
+
 });
+
+
 
 module.exports = router;

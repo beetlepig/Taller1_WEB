@@ -45,6 +45,10 @@ exports.getSecoCheck=function () {
     return secoCheck;
 };
 
+exports.getArbolCheck=function () {
+    return arbolCheck;
+};
+
 exports.comprobarFiltroActivo= function () {
   if(arbolCheck | arbustoCheck | florCheck | helechoCheck | frioCheck | calienteCheck | templadoCheck |lluviosoCheck | secoCheck){
       return true;
@@ -68,6 +72,10 @@ exports.getFiltro= function () {
 
 exports.getArrayFinal= function () {
   return arrayFinal;
+};
+
+exports.getSegundoArray= function () {
+    return arrayFinalFinal;
 };
 
 exports.pushCategoriaFlor= function () {
