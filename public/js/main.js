@@ -2,11 +2,19 @@ var btnArray=[];
 var countArray=[];
 var countProducto=[];
 
+var socket = io.connect('http://localhost:3000', { 'forceNew': true });
+
+
+
 window.onload = function(){
 
-    for(i=0;i<count;i++){
+
+if( typeof count != 'undefined') {
+    for (i = 0; i < count; i++) {
         countProducto.push(0);
     }
+}
+
     for (i=0;i<9;i++){
         btnArray.push(document.getElementById("button"+i));
 

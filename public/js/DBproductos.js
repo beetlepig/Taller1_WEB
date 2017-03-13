@@ -25,6 +25,22 @@ var productos= [
     {"nombre":"Aloe Vera", "srcIMG":"/images/imgProductos/10.jpg", "categoria":"Flor", "color":"249,168,37 ,1", "clima":"Seco"}
 ];
 
+exports.clear= function () {
+
+     productosFiltrados = [];
+    arrayFinal= [];
+    arrayFinalFinal= [];
+    arbolCheck=false;
+    arbustoCheck=false;
+    florCheck=false;
+    helechoCheck=false;
+    frioCheck=false;
+    calienteCheck=false;
+    templadoCheck=false;
+    lluviosoCheck=false;
+    secoCheck=false;
+};
+
 exports.getProductosTamano=function () {
   return productos.length;
 };
